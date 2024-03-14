@@ -1,0 +1,79 @@
+2024-03-14 10:47:52,149 task INFO:select dataset: mnist
+2024-03-14 10:47:52,544 task INFO:select model: AE, model args: {'class_num': 10}
+2024-03-14 10:47:52,562 task INFO:optimizer: adam, learning rate: 0.001
+2024-03-14 10:47:53,945 task INFO:start train...
+2024-03-14 10:47:53,947 task DEBUG:epoch_0 start...
+2024-03-14 10:47:54,018 task INFO:Epoch: 1, loss = 2.307273
+2024-03-14 10:47:54,175 task INFO:Epoch: 1, loss = 2.300534
+2024-03-14 10:47:54,204 task INFO:Epoch: 1, loss = 2.291688
+2024-03-14 10:47:54,233 task INFO:Epoch: 1, loss = 2.282960
+2024-03-14 10:47:54,257 task INFO:Epoch: 1, loss = 2.258286
+2024-03-14 10:47:54,282 task INFO:Epoch: 1, loss = 2.232526
+2024-03-14 10:47:54,308 task INFO:Epoch: 1, loss = 2.208931
+2024-03-14 10:47:54,333 task INFO:Epoch: 1, loss = 2.163022
+2024-03-14 10:47:54,359 task INFO:Epoch: 1, loss = 2.106203
+2024-03-14 10:47:54,386 task INFO:Epoch: 1, loss = 2.028859
+2024-03-14 10:47:54,413 task INFO:Epoch: 1, loss = 1.962341
+2024-03-14 10:47:54,436 task INFO:Epoch: 1, loss = 1.924633
+2024-03-14 10:47:54,459 task INFO:Epoch: 1, loss = 1.822568
+2024-03-14 10:47:54,482 task INFO:Epoch: 1, loss = 1.717154
+2024-03-14 10:47:54,504 task INFO:Epoch: 1, loss = 1.658376
+2024-03-14 10:47:54,528 task INFO:Epoch: 1, loss = 1.565765
+2024-03-14 10:47:54,550 task INFO:Epoch: 1, loss = 1.481483
+2024-03-14 10:47:54,577 task INFO:Epoch: 1, loss = 1.452751
+2024-03-14 10:47:54,601 task INFO:Epoch: 1, loss = 1.322863
+2024-03-14 10:47:54,627 task INFO:Epoch: 1, loss = 1.186029
+2024-03-14 10:47:54,650 task INFO:Epoch: 1, loss = 1.127432
+2024-03-14 10:47:54,676 task INFO:Epoch: 1, loss = 1.054912
+2024-03-14 10:47:54,701 task INFO:Epoch: 1, loss = 1.052711
+2024-03-14 10:47:54,723 task INFO:Epoch: 1, loss = 0.979517
+2024-03-14 10:47:54,747 task INFO:Epoch: 1, loss = 0.878956
+2024-03-14 10:47:54,826 task INFO:Epoch: 1, loss = 0.868327
+2024-03-14 10:47:54,852 task INFO:Epoch: 1, loss = 0.879061
+2024-03-14 10:47:54,890 task INFO:Epoch: 1, loss = 0.801183
+2024-03-14 10:47:54,922 task INFO:Epoch: 1, loss = 0.747369
+2024-03-14 10:47:54,951 task INFO:Epoch: 1, loss = 0.834383
+2024-03-14 10:47:54,981 task INFO:Epoch: 1, loss = 0.861592
+2024-03-14 10:47:55,008 task INFO:Epoch: 1, loss = 0.691907
+2024-03-14 10:47:55,037 task INFO:Epoch: 1, loss = 0.710755
+2024-03-14 10:47:55,067 task INFO:Epoch: 1, loss = 0.558510
+2024-03-14 10:47:55,098 task INFO:Epoch: 1, loss = 0.599154
+2024-03-14 10:47:55,127 task INFO:Epoch: 1, loss = 0.534961
+2024-03-14 10:47:55,159 task INFO:Epoch: 1, loss = 0.680770
+2024-03-14 10:47:55,188 task INFO:Epoch: 1, loss = 0.588467
+2024-03-14 10:47:55,218 task INFO:Epoch: 1, loss = 0.577267
+2024-03-14 10:47:55,248 task INFO:Epoch: 1, loss = 0.490276
+2024-03-14 10:47:55,275 task INFO:Epoch: 1, loss = 0.553479
+2024-03-14 10:47:55,302 task INFO:Epoch: 1, loss = 0.594665
+2024-03-14 10:47:55,328 task INFO:Epoch: 1, loss = 0.501658
+2024-03-14 10:47:55,353 task INFO:Epoch: 1, loss = 0.548720
+2024-03-14 10:47:55,377 task INFO:Epoch: 1, loss = 0.536462
+2024-03-14 10:47:55,402 task INFO:Epoch: 1, loss = 0.478045
+2024-03-14 10:47:55,425 task INFO:Epoch: 1, loss = 0.465500
+2024-03-14 10:47:55,447 task INFO:Epoch: 1, loss = 0.499907
+2024-03-14 10:47:55,470 task INFO:Epoch: 1, loss = 0.523531
+2024-03-14 10:47:55,495 task INFO:Epoch: 1, loss = 0.516431
+2024-03-14 10:47:55,518 task INFO:Epoch: 1, loss = 0.427092
+2024-03-14 10:47:55,543 task INFO:Epoch: 1, loss = 0.505069
+2024-03-14 10:47:55,567 task INFO:Epoch: 1, loss = 0.429779
+2024-03-14 10:47:55,592 task INFO:Epoch: 1, loss = 0.424672
+2024-03-14 10:47:55,616 task INFO:Epoch: 1, loss = 0.404317
+2024-03-14 10:47:55,639 task INFO:Epoch: 1, loss = 0.347964
+2024-03-14 10:47:55,662 task INFO:Epoch: 1, loss = 0.324885
+2024-03-14 10:47:55,688 task INFO:Epoch: 1, loss = 0.266751
+2024-03-14 10:47:55,708 task INFO:Epoch: 1, loss = 0.353736
+2024-03-14 10:47:55,718 task INFO:start test...
+2024-03-14 10:47:56,143 task INFO:loss = 0.385126
+2024-03-14 10:47:56,158 task INFO:loss = 0.532414
+2024-03-14 10:47:56,172 task INFO:loss = 0.471648
+2024-03-14 10:47:56,186 task INFO:loss = 0.468401
+2024-03-14 10:47:56,199 task INFO:loss = 0.401144
+2024-03-14 10:47:56,213 task INFO:loss = 0.299585
+2024-03-14 10:47:56,227 task INFO:loss = 0.298533
+2024-03-14 10:47:56,240 task INFO:loss = 0.257786
+2024-03-14 10:47:56,253 task INFO:loss = 0.192347
+2024-03-14 10:47:56,263 task INFO:loss = 0.418021
+2024-03-14 10:47:56,664 task INFO:acc score is: 0.8843
+2024-03-14 10:48:02,787 task INFO:id为1的图片 对应的真实值:2, 预测值:2
+2024-03-14 10:48:06,562 task INFO:id为2的图片 对应的真实值:1, 预测值:1
+2024-03-14 10:48:10,217 task INFO:id为5的图片 对应的真实值:1, 预测值:1
