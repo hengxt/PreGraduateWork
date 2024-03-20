@@ -1,0 +1,89 @@
+2024-03-15 12:24:40,038 task INFO:select dataset: mnist
+2024-03-15 12:24:40,390 task INFO:select model: rnn, model args: {'class_num': 10, 'hidden_size': 128}
+2024-03-15 12:24:40,393 task INFO:optimizer: adam, learning rate: 0.001
+2024-03-15 12:24:41,354 task INFO:start train...
+2024-03-15 12:24:41,356 task DEBUG:epoch_0 start...
+2024-03-15 12:24:41,532 task INFO:Epoch: 1, loss = 2.304781
+2024-03-15 12:24:42,126 task INFO:Epoch: 1, loss = 2.305979
+2024-03-15 12:24:42,666 task INFO:Epoch: 1, loss = 2.304257
+2024-03-15 12:24:43,209 task INFO:Epoch: 1, loss = 2.303818
+2024-03-15 12:24:43,815 task INFO:Epoch: 1, loss = 2.302304
+2024-03-15 12:24:44,368 task INFO:Epoch: 1, loss = 2.302587
+2024-03-15 12:24:44,915 task INFO:Epoch: 1, loss = 2.301783
+2024-03-15 12:24:45,472 task INFO:Epoch: 1, loss = 2.301829
+2024-03-15 12:24:46,018 task INFO:Epoch: 1, loss = 2.301363
+2024-03-15 12:24:46,552 task INFO:Epoch: 1, loss = 2.301179
+2024-03-15 12:24:47,094 task INFO:Epoch: 1, loss = 2.300977
+2024-03-15 12:24:47,689 task INFO:Epoch: 1, loss = 2.301315
+2024-03-15 12:24:48,227 task INFO:Epoch: 1, loss = 2.301153
+2024-03-15 12:24:48,770 task INFO:Epoch: 1, loss = 2.302405
+2024-03-15 12:24:49,252 task INFO:Epoch: 1, loss = 2.300338
+2024-03-15 12:24:49,504 task DEBUG:epoch_1 start...
+2024-03-15 12:24:49,699 task INFO:Epoch: 2, loss = 2.301298
+2024-03-15 12:24:50,286 task INFO:Epoch: 2, loss = 2.299849
+2024-03-15 12:24:50,867 task INFO:Epoch: 2, loss = 2.300744
+2024-03-15 12:24:51,473 task INFO:Epoch: 2, loss = 2.299961
+2024-03-15 12:24:52,079 task INFO:Epoch: 2, loss = 2.300572
+2024-03-15 12:24:52,643 task INFO:Epoch: 2, loss = 2.301857
+2024-03-15 12:24:53,275 task INFO:Epoch: 2, loss = 2.300287
+2024-03-15 12:24:53,873 task INFO:Epoch: 2, loss = 2.300874
+2024-03-15 12:24:54,449 task INFO:Epoch: 2, loss = 2.300462
+2024-03-15 12:24:55,052 task INFO:Epoch: 2, loss = 2.300424
+2024-03-15 12:24:55,655 task INFO:Epoch: 2, loss = 2.299823
+2024-03-15 12:24:56,452 task INFO:Epoch: 2, loss = 2.300682
+2024-03-15 12:24:57,078 task INFO:Epoch: 2, loss = 2.300683
+2024-03-15 12:24:57,737 task INFO:Epoch: 2, loss = 2.301676
+2024-03-15 12:24:58,264 task INFO:Epoch: 2, loss = 2.299021
+2024-03-15 12:24:58,592 task DEBUG:epoch_2 start...
+2024-03-15 12:24:58,835 task INFO:Epoch: 3, loss = 2.300054
+2024-03-15 12:24:59,575 task INFO:Epoch: 3, loss = 2.299572
+2024-03-15 12:25:00,350 task INFO:Epoch: 3, loss = 2.299835
+2024-03-15 12:25:01,001 task INFO:Epoch: 3, loss = 2.299444
+2024-03-15 12:25:01,694 task INFO:Epoch: 3, loss = 2.299503
+2024-03-15 12:25:02,275 task INFO:Epoch: 3, loss = 2.301182
+2024-03-15 12:25:02,887 task INFO:Epoch: 3, loss = 2.299306
+2024-03-15 12:25:03,500 task INFO:Epoch: 3, loss = 2.299723
+2024-03-15 12:25:04,137 task INFO:Epoch: 3, loss = 2.299786
+2024-03-15 12:25:04,785 task INFO:Epoch: 3, loss = 2.299724
+2024-03-15 12:25:05,389 task INFO:Epoch: 3, loss = 2.298873
+2024-03-15 12:25:06,008 task INFO:Epoch: 3, loss = 2.300141
+2024-03-15 12:25:06,581 task INFO:Epoch: 3, loss = 2.299754
+2024-03-15 12:25:07,128 task INFO:Epoch: 3, loss = 2.299668
+2024-03-15 12:25:07,603 task INFO:Epoch: 3, loss = 2.298243
+2024-03-15 12:25:07,837 task DEBUG:epoch_3 start...
+2024-03-15 12:25:08,078 task INFO:Epoch: 4, loss = 2.299568
+2024-03-15 12:25:08,615 task INFO:Epoch: 4, loss = 2.299463
+2024-03-15 12:25:09,149 task INFO:Epoch: 4, loss = 2.299507
+2024-03-15 12:25:09,692 task INFO:Epoch: 4, loss = 2.298177
+2024-03-15 12:25:10,232 task INFO:Epoch: 4, loss = 2.299179
+2024-03-15 12:25:10,771 task INFO:Epoch: 4, loss = 2.300699
+2024-03-15 12:25:11,390 task INFO:Epoch: 4, loss = 2.298005
+2024-03-15 12:25:11,961 task INFO:Epoch: 4, loss = 2.298641
+2024-03-15 12:25:12,501 task INFO:Epoch: 4, loss = 2.299517
+2024-03-15 12:25:13,102 task INFO:Epoch: 4, loss = 2.298997
+2024-03-15 12:25:13,880 task INFO:Epoch: 4, loss = 2.297536
+2024-03-15 12:25:14,509 task INFO:Epoch: 4, loss = 2.299536
+2024-03-15 12:25:15,075 task INFO:Epoch: 4, loss = 2.298720
+2024-03-15 12:25:15,783 task INFO:Epoch: 4, loss = 2.298292
+2024-03-15 12:25:16,321 task INFO:Epoch: 4, loss = 2.296916
+2024-03-15 12:25:16,587 task DEBUG:epoch_4 start...
+2024-03-15 12:25:16,769 task INFO:Epoch: 5, loss = 2.298871
+2024-03-15 12:25:17,338 task INFO:Epoch: 5, loss = 2.298973
+2024-03-15 12:25:17,953 task INFO:Epoch: 5, loss = 2.298831
+2024-03-15 12:25:18,564 task INFO:Epoch: 5, loss = 2.296893
+2024-03-15 12:25:19,167 task INFO:Epoch: 5, loss = 2.298500
+2024-03-15 12:25:19,797 task INFO:Epoch: 5, loss = 2.300293
+2024-03-15 12:25:20,434 task INFO:Epoch: 5, loss = 2.296734
+2024-03-15 12:25:21,021 task INFO:Epoch: 5, loss = 2.297456
+2024-03-15 12:25:21,602 task INFO:Epoch: 5, loss = 2.298859
+2024-03-15 12:25:22,169 task INFO:Epoch: 5, loss = 2.298151
+2024-03-15 12:25:22,738 task INFO:Epoch: 5, loss = 2.296203
+2024-03-15 12:25:23,307 task INFO:Epoch: 5, loss = 2.298753
+2024-03-15 12:25:23,931 task INFO:Epoch: 5, loss = 2.297653
+2024-03-15 12:25:24,512 task INFO:Epoch: 5, loss = 2.296498
+2024-03-15 12:25:25,053 task INFO:Epoch: 5, loss = 2.295419
+2024-03-15 12:25:25,296 task INFO:start test...
+2024-03-15 12:25:25,819 task INFO:loss = 2.298576
+2024-03-15 12:25:25,996 task INFO:loss = 2.295026
+2024-03-15 12:25:26,076 task INFO:loss = 2.294363
+2024-03-15 12:25:26,817 task INFO:acc score is: 0.1178

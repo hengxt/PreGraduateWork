@@ -1,0 +1,6 @@
+2024-03-15 12:39:22,914 task INFO:select dataset: mnist
+2024-03-15 12:39:23,287 task INFO:select model: rnn, model args: {'class_num': 10, 'hidden_size': 128}
+2024-03-15 12:39:23,289 task INFO:optimizer: adam, learning rate: 0.001
+2024-03-15 12:39:24,328 task INFO:start train...
+2024-03-15 12:39:24,329 task DEBUG:epoch_0 start...
+2024-03-15 12:39:24,532 task INFO:Epoch: 1, loss = 2.308613
