@@ -30,7 +30,8 @@ class ModelFactory():
             return LSTM(class_num)
         elif modelName == 'rnn':
             class_num = kwargs['class_num']
-            return RNN(class_num)
+            hidden_size = kwargs['hidden_size']
+            return RNN(class_num, hidden_size)
         elif modelName == 'AE':
             class_num = kwargs['class_num']
             return AE(class_num)

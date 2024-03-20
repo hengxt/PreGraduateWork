@@ -12,12 +12,24 @@ from model.BaseModel import BaseModel
 
 class RNN(BaseModel):
 
-    def __init__(self, class_num: int):
+    def __init__(self, class_num: int, hidden_size):
         super().__init__()
-        self.rnn = RNNCore(28*28, 128, 2)
+        self.hidden_size = hidden_size
+        self.rnn = RNNCore(28, self.hidden_size, 2)
         # self.rnn = nn.RNN(28*28, 128, 2, batch_first=True)
-        self.FC1 = nn.Linear(128, class_num)
+        self.FC1 = nn.Sequential(
+            nn.Linear(28, 128),
+            nn.Linear(128, class_num)
+        )
 
+    def forward(self, input):
+        input = input.reshape(-1, 28, 28)  ## batch, seq, feature
+        out, hidden = self.rnn(input)
+        tmp1 = out[:, 1, :]
+        tmp2 = self.FC1(tmp1)
+        return tmp2
+
+    '''
     def forward(self, input):
         input = input.reshape(-1, 28 * 28)  ## batch,feature
         out, hidden = self.rnn(input)
@@ -25,6 +37,7 @@ class RNN(BaseModel):
         tmp1 = out[:,  :]
         tmp2 = self.FC1(tmp1)
         return tmp2
+    '''
 
     def loss_function(self, y_pred, y_true):
         return nn.CrossEntropyLoss()(y_pred, y_true)
@@ -52,6 +65,46 @@ class RNNCore(nn.Module):
         self.W = nn.Linear(hidden_size, hidden_size)
         self.U = nn.Linear(input_size, hidden_size)
         self.tanh = nn.Tanh()
+
+        output_size = input_size
+        self.V = nn.Linear(hidden_size, output_size)
+        self.softmax = nn.Softmax(dim=1)
+
+        self.num_layers = num_layers  ## 几层RNN
+
+    def forward(self, inputs):
+        batch_len = inputs.shape[0]
+        seq_len = inputs.shape[1]
+        hidden = Variable(torch.zeros(self.num_layers, batch_len, self.hidden_size))
+        output = inputs  ## 为了上面的更多层，下面层的输出作为上面层的输入
+        for layer in range(self.num_layers):
+            for seq in range(seq_len):
+                a = self.W(hidden[layer, :, :]) + self.U(output[:, seq, :])  # 1024, 28*28
+                hidden[layer, :, :] = self.tanh(a)
+                o = self.V(hidden[layer, :, :])
+                y = self.softmax(o)
+                output[:, seq, :] = y
+
+        return output, hidden
+
+
+"""
+class RNNCore(nn.Module):
+    def __init__(self, input_size, hidden_size, num_layers):
+        super().__init__()
+        '''
+        a(t)=b1+【W】h(t-1)+【U】x(t),
+        h(t)=tanh(a(t)),
+        o(t)=b2+【V】h(t),
+        y(t)=softmax(o(t)),
+        '''
+        self.input_size = input_size
+        self.hidden_size = hidden_size
+        self.num_layers = num_layers
+
+        self.W = nn.Linear(hidden_size, hidden_size)
+        self.U = nn.Linear(input_size, hidden_size)
+        self.tanh = nn.Tanh()
         self.V = nn.Linear(hidden_size, hidden_size)
         self.softmax = nn.Softmax(dim=1)
 
@@ -63,7 +116,6 @@ class RNNCore(nn.Module):
         batch_len = inputs.shape[0]
         if hidden is None:
             hidden = Variable(torch.zeros(batch_len, self.hidden_size))
-
         a = Variable(torch.zeros(batch_len, self.hidden_size))
         o = Variable(torch.zeros(batch_len, self.hidden_size))
         y = Variable(torch.zeros(batch_len, self.hidden_size))
@@ -78,4 +130,4 @@ class RNNCore(nn.Module):
             o = self.V(hidden)
             y = self.softmax(o)
         return y, hidden
-
+"""

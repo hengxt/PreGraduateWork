@@ -5,7 +5,6 @@
 import logging
 
 import numpy as np
-import torch.nn as nn
 import torch.optim
 from torch.utils.data import DataLoader
 from tqdm import tqdm
@@ -40,11 +39,11 @@ def run(**kwargs):
     logger.info("start train...")
     model.train()
     pbar1 = tqdm(total=epochs)
-    pbar2 = tqdm(total=len(train_data_loader))
     loss = 0.0
     for epoch in range(epochs):
         logger.debug("epoch_{} start...".format(epoch))
         pbar1.set_description('epoch_{} start...'.format(epoch))
+        pbar2 = tqdm(total=len(train_data_loader))
         for x, y in train_data_loader:
             pbar2.set_description('loss = {:.6f}'.format(loss))
             x = x.to(device)
@@ -79,6 +78,7 @@ def run(**kwargs):
     y_pred = model(x_test)
     score = model.metrics_function(y_pred, y_test)
     logger.info("acc score is: {}".format(score))
+    print("acc score is: {}".format(score))
     ## interact
     y_test = np.argmax(y_test.detach().numpy(), axis=1)
     y_pred = np.argmax(y_pred.detach().numpy(), axis=1)

@@ -1,7 +1,7 @@
 #Here define some config used for logging
 import logging
 from datetime import datetime
-import os 
+import os
 encoding = "utf-8"
 level = logging.DEBUG
 format = '%(asctime)s %(name)s %(levelname)s:%(message)s'
@@ -16,12 +16,11 @@ def get_file_name():
         if(os.path.exists(filename)):
             order += 1
             continue
-        else: 
+        else:
             return filename
-    
 
 def set_log_config():
-    logging.basicConfig(filename = get_file_name(), 
-                        encoding = encoding, 
+    logging.basicConfig(filename = get_file_name(),
+                        encoding = encoding,
                         level = level,
                         format = format)
