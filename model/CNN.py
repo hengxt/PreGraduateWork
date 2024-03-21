@@ -58,7 +58,7 @@ def getModelSize(model):
         buffer_size += buffer.nelement() * buffer.element_size()
         buffer_sum += buffer.nelement()
     all_size = (param_size + buffer_size) / 1024
-    print('模型总大小为：{:.3f}kB'.format(all_size))
+    # print('模型总大小为：{:.3f}kB'.format(all_size))
     print('模型总大小为：{:}B'.format(param_size + buffer_size))
     return (param_size, param_sum, buffer_size, buffer_sum, all_size)
 
@@ -66,4 +66,20 @@ def getModelSize(model):
 if __name__ == '__main__':
     model = CNN(10)
     getModelSize(model)
-
+    getModelSize(nn.Conv2d(1, 32, 5, 1, 2))
+    getModelSize(nn.MaxPool2d(2, 2))
+    getModelSize(nn.Conv2d(32, 64, 5, 1, 2))
+    getModelSize(nn.MaxPool2d(2, 2))
+    getModelSize(nn.Linear(64*7*7, 10))
+    print("========")
+    getModelSize(nn.Sequential(
+            nn.Conv2d(1, 32, 5, 1, 2),  ## 此处输出通道的选择
+            nn.ReLU(),
+            nn.MaxPool2d(2, 2)
+        ))
+    getModelSize(nn.Sequential(
+            nn.Conv2d(32, 64, 5, 1, 2),
+            nn.ReLU(),
+            nn.MaxPool2d(2, 2)
+        ))
+    getModelSize(nn.Linear(64*7*7, 10))

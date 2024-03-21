@@ -88,3 +88,5 @@ def run(**kwargs):
         logger.info('id为{}的图片 对应的真实值:{}, 预测值:{}'.format(idx, y_test[idx], y_pred[idx]))
         print('id为{}的图片 对应的真实值:{}, 预测值:{}\n'.format(idx, y_test[idx], y_pred[idx]))
         ImgUtil.img_show(x_test[idx][0] * 256)
+
+
