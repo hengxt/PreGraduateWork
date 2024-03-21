@@ -113,11 +113,40 @@ class FEAD(BaseModel):
         print("AUC-ROC: %.4f, AUC-PR: %.4f" % (roc_auc, ap))
         return roc_auc, ap
 
+
+## 第一种数据分配：挑30个异常放入训练集
+def getDataBySelect(src, partRatio):
+    f = pd.read_csv(src, header=None)
+    x = f.iloc[:, 0:-1]
+    y = f.iloc[:, -1]
+    # 寻找30个异常数据置于训练集
+    tmp = np.where(y == 0.0)[0]
+    a1 = x.loc[tmp]  ## 全是异常
+    a11 = y.loc[tmp]
+    tmp = np.where(y == 1.0)[0]
+    a2 = x.loc[tmp]  ## 全是正常
+    a22 = y.loc[tmp]
+
+    train_x = np.append(a1[:30], a2)
+    test_x = a1[30:]
+    train_y = np.append(a11[:30], a22)
+    test_y = a11[30:]
+
+    feature = test_x.shape[1]
+
+    x_test = torch.from_numpy(test_x.to_numpy()).float()
+    x_train = torch.from_numpy(train_x.reshape(-1,feature )).float()
+    y_test = torch.from_numpy(test_y.to_numpy()).float()
+    y_train = torch.from_numpy(train_y).float()
+
+    return x_test, x_train, y_test, y_train, feature
+
+## 第二种数据分配：8:2分配训练集
 def getData(src, partRatio):
     f = pd.read_csv(src, header=None)
     x = f.iloc[:, 0:-1]
-    x = torch.from_numpy(x.to_numpy()).float()
     y = f.iloc[:, -1]
+    x = torch.from_numpy(x.to_numpy()).float()
     y = torch.from_numpy(y.to_numpy()).float()
     data_len = x.shape[0]
     feature = x.shape[1]
