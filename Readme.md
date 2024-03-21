@@ -33,3 +33,36 @@
 - 基于我们的编码策略，我们提出了一个异常检测系统，它无缝地结合了所提出的编码中的信息。
     
 - 我们在各种数据集上对所提出的方法进行了广泛的实验分析，并证明了我们方法的有效性。我们还进行了消融研究，以调查我们方法中各种成分的影响。
+
+**测试结果**
+- arrhythmia_normalization
+    
+AUC-ROC: 0.8588, AUC-PR: 0.9541
+
+- cardio_normalization
+    
+AUC-ROC: 0.3764, AUC-PR: 0.4366
+ 
+- fraud_normalization
+    
+AUC-ROC: 0.9997, AUC-PR: 1.0000
+
+- mammography_normalization
+    
+AUC-ROC: 0.5000, AUC-PR: 0.9763
+
+- nslkdd_normalization.csv
+  
+AUC-ROC: 0.9975, AUC-PR: 0.9978
+ 
+- satellite_normalization
+  
+AUC-ROC: 0.8030, AUC-PR: 0.9036
+ 
+- shuttle_normalization
+  
+AUC-ROC: 0.5000, AUC-PR: 0.9299
+ 
+- spambase_normalization
+  
+正负例不足
