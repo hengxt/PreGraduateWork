@@ -12,8 +12,8 @@
 新模型都请继承BaseModel类，实现类的loss_function和metrics_function，然后加入ModelFactory里
 然后修改run.py里的args参数即可运行
 
-## 异常检测模型
-### Feature_Encoding_with_AutoEncoders_for_Weakly-supervised_Anomaly_Detection
+## pytorch实现异常检测模型
+### 1、Feature_Encoding_with_AutoEncoders_for_Weakly-supervised_Anomaly_Detection
 **问题：**
 然而，由于标注的异常样本数量有限，直接训练具有判别性损失的网络可能是不够的
 
